@@ -8,7 +8,7 @@ const FeatureTabs = () => {
     <>
       <section id="tabs" className="">
         <div className="container relative mx-auto my-6 mb-32 mt-12 px-6">
-          <div className="lg:w-[2000px] lg:h-[300px] lg:right-[30%] lg:absolute lg:rounded-r-full lg:top-60 lg:bg-softBlue" />
+          <div className="lg:w-[2000px] lg:h-[300px] lg:right-[60%] lg:absolute lg:rounded-r-full lg:top-60 lg:bg-softBlue" />
           {/*tabs container*/}
           <div className="flex flex-col justify-center max-w-xl mx-auto mb-6 border-b md:space-x-10 md:flex-row">
             {/*Tab 1*/}
