@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const rubik = Rubik({ weight: ["400", "600", "700"], subsets: ["latin"] });
 
 export const metadata = {
   title: "Bookmark - Ken Vilar",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={rubik.className}>{children}</body>
     </html>
   );
 }
