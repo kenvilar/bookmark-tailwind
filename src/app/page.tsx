@@ -5,6 +5,7 @@ import Features from "@/app/components/Features";
 import FeatureTabs from "@/app/components/FeatureTabs";
 import Download from "@/app/components/Download";
 import DownloadBoxes from "@/app/components/DownloadBoxes";
+import FAQ from "@/app/components/FAQ";
 
 export default function Home() {
   return (
@@ -20,6 +21,8 @@ export default function Home() {
       <Download />
 
       <DownloadBoxes />
+
+      <FAQ />
     </>
   );
 }
