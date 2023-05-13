@@ -7,6 +7,7 @@ import Download from "@/app/components/Download";
 import DownloadBoxes from "@/app/components/DownloadBoxes";
 import FAQ from "@/app/components/FAQ";
 import FAQAccordion from "@/app/components/FAQAccordion";
+import Newsletter from "@/app/components/Newsletter";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
       <FAQ />
 
       <FAQAccordion />
+
+      <Newsletter />
     </>
   );
 }
