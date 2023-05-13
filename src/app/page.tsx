@@ -4,6 +4,7 @@ import Hero from "@/app/components/Hero";
 import Features from "@/app/components/Features";
 import FeatureTabs from "@/app/components/FeatureTabs";
 import Download from "@/app/components/Download";
+import DownloadBoxes from "@/app/components/DownloadBoxes";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <FeatureTabs />
 
       <Download />
+
+      <DownloadBoxes />
     </>
   );
 }
