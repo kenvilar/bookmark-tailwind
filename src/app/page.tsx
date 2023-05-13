@@ -3,6 +3,7 @@ import Header from "@/app/components/Header";
 import Hero from "@/app/components/Hero";
 import Features from "@/app/components/Features";
 import FeatureTabs from "@/app/components/FeatureTabs";
+import Download from "@/app/components/Download";
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <Features />
 
       <FeatureTabs />
+
+      <Download />
     </>
   );
 }
