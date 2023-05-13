@@ -1,12 +1,51 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Tab1 from "@/app/images/illustration-features-tab-1.svg";
 import Tab2 from "@/app/images/illustration-features-tab-2.svg";
 import Tab3 from "@/app/images/illustration-features-tab-3.svg";
 
 const FeatureTabs = () => {
+  const tabsRef: any = useRef(null);
+  const panelsRef: any = useRef(null);
+
+  useEffect(() => {
+    tabsMenuEventListener();
+  }, []);
+
+  const tabsMenuEventListener = () => {
+    let _tabs = tabsRef.current?.querySelectorAll(".tab");
+    _tabs.forEach((tab: any) => tab.addEventListener("click", onTabClick));
+  };
+
+  const onTabClick = (e: any) => {
+    let _tabs = tabsRef.current?.querySelectorAll(".tab");
+    let _panels = panelsRef.current?.querySelectorAll(".panel");
+    // deactivate all tabs
+    _tabs.forEach((tab: any) => {
+      tab.children[0].classList.remove(
+        "border-softRed",
+        "border-b-4",
+        "md:border-b-0"
+      );
+    });
+
+    // hide all panels
+    _panels.forEach((panel) => {
+      panel.classList.add("hidden");
+    });
+
+    // activate a new tab and panel based on the target
+    e.target.classList.add("border-softRed", "border-b-4");
+    const classString = e.target.getAttribute("data-target");
+    panelsRef.current
+      ?.getElementsByClassName(classString)[0]
+      .classList.remove("hidden");
+  };
+
   return (
     <>
-      <section id="tabs" className="">
+      <section id="tabs" ref={tabsRef} className="">
         <div className="container relative mx-auto my-6 mb-32 mt-12 px-6">
           <div className="lg:w-[2000px] lg:h-[300px] lg:right-[60%] lg:absolute lg:rounded-r-full lg:top-60 lg:bg-softBlue" />
           {/*tabs container*/}
@@ -46,7 +85,7 @@ const FeatureTabs = () => {
           </div>
 
           {/*Tab Panels*/}
-          <div id="panels" className="container mx-auto">
+          <div id="panels" ref={panelsRef} className="container mx-auto">
             {/*Panel 1*/}
             <div className="flex flex-col py-5 md:flex-row md:space-x-7 panel panel-1">
               {/*Panel Image*/}
