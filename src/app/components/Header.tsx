@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import Image from "next/image";
 import Logo from "@/app/images/logo-bookmark.svg";
+import FooterLogo from "@/app/images/logo-bookmark-footer.svg";
 
 const Header = () => {
   const btn: any = useRef(null);
@@ -13,6 +14,12 @@ const Header = () => {
     btn.current?.classList?.toggle("open");
     menu.current?.classList?.toggle("flex");
     menu.current?.classList?.toggle("hidden");
+
+    if (menu.current?.classList?.contains("flex")) {
+      logo.current?.setAttribute("src", Logo.src);
+    } else {
+      logo.current?.setAttribute("src", FooterLogo.src);
+    }
   };
 
   return (
