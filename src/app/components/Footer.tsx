@@ -30,7 +30,12 @@ const Footer = () => {
           <div className="flex space-x-10">
             {socialItems.map((item, idx) => {
               return (
-                <Image key={idx} src={item} alt="icon" className="h-6 ficon" />
+                <Image
+                  key={idx}
+                  src={item}
+                  alt="icon"
+                  className="h-6 ficon cursor-pointer"
+                />
               );
             })}
           </div>
