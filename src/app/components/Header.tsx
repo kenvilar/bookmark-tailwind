@@ -33,6 +33,16 @@ const Header = () => {
               Login
             </a>
           </div>
+
+          {/*hamburger button*/}
+          <button
+            id="menu-btn"
+            className="z-30 block md:hidden focus:outline-none hamburger"
+          >
+            <span className="hamburger-top" />
+            <span className="hamburger-middle" />
+            <span className="hamburger-bottom" />
+          </button>
         </div>
       </nav>
     </>
