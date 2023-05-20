@@ -1,15 +1,26 @@
+"use client";
+import { useRef } from "react";
 import Image from "next/image";
 import Logo from "@/app/images/logo-bookmark.svg";
 
 const Header = () => {
+  const btn: any = useRef(null);
+  const menu: any = useRef(null);
+  const logo: any = useRef(null);
   const menuItems = ["Features", "Download", "FAQ"];
+
+  const navToggle = () => {
+    btn.current?.classList?.toggle("open");
+    menu.current?.classList?.toggle("flex");
+    menu.current?.classList?.toggle("hidden");
+  };
 
   return (
     <>
       <nav className="container relative mx-auto p-6">
         <div className="flex items-center justify-between space-x-20 my-6">
           <div className="z-30">
-            <Image src={Logo} alt="logo" id="logo" className="" />
+            <Image ref={logo} src={Logo} alt="logo" id="logo" className="" />
           </div>
 
           {/*menu items*/}
@@ -36,8 +47,10 @@ const Header = () => {
 
           {/*hamburger button*/}
           <button
+            ref={btn}
             id="menu-btn"
             className="z-30 block md:hidden focus:outline-none hamburger"
+            onClick={navToggle}
           >
             <span className="hamburger-top" />
             <span className="hamburger-middle" />
@@ -47,8 +60,9 @@ const Header = () => {
 
         {/*mobile menu*/}
         <div
+          ref={menu}
           id="menu"
-          className="fixed inset-0 z-20 flex flex-col items-center self-end w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
+          className="fixed inset-0 z-20 hidden flex flex-col items-center self-end w-full h-full min-h-screen px-6 py-1 pt-24 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue"
         >
           <div className="w-full py-3 text-center">
             <a href="#features" className="block hover:text-softRed">
