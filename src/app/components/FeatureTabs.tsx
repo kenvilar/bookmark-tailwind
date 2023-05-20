@@ -31,7 +31,7 @@ const FeatureTabs = () => {
     });
 
     // hide all panels
-    _panels.forEach((panel) => {
+    _panels.forEach((panel: any) => {
       panel.classList.add("hidden");
     });
 
