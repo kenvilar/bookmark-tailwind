@@ -4,7 +4,7 @@ const FAQAccordion = () => {
       <section id="faq-accordion">
         <div className="container mx-auto px-6 mb-32">
           <div className="max-w-2xl m-8 mx-auto overflow-hidden">
-            <div className="py-1 border-b outline-none group" tabIndex="1">
+            <div className="py-1 border-b outline-none group" tabIndex={1}>
               <div className="flex items-center justify-between py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
                 <div className="transition duration-500 ease group-hover:text-red-500">
                   What is Bookmark?
@@ -36,7 +36,7 @@ const FAQAccordion = () => {
               </div>
             </div>
 
-            <div className="py-1 border-b outline-none group" tabIndex="2">
+            <div className="py-1 border-b outline-none group" tabIndex={2}>
               <div className="flex items-center justify-between py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
                 <div className="transition duration-500 ease group-hover:text-red-500">
                   How can I request a new browser?
@@ -68,7 +68,7 @@ const FAQAccordion = () => {
               </div>
             </div>
 
-            <div className="py-1 border-b outline-none group" tabIndex="3">
+            <div className="py-1 border-b outline-none group" tabIndex={3}>
               <div className="flex items-center justify-between py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
                 <div className="transition duration-500 ease group-hover:text-red-500">
                   Is there a mobile app?
@@ -100,7 +100,7 @@ const FAQAccordion = () => {
               </div>
             </div>
 
-            <div className="py-1 border-b outline-none group" tabIndex="4">
+            <div className="py-1 border-b outline-none group" tabIndex={4}>
               <div className="flex items-center justify-between py-3 text-gray-500 transition duration-500 cursor-pointer group ease">
                 <div className="transition duration-500 ease group-hover:text-red-500">
                   What about other Chromium browsers
